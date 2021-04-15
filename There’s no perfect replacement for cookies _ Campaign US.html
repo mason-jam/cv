@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html prefix="og: http://ogp.me/ns#" class="no-js ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html prefix="og: http://ogp.me/ns#" class="no-js ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html prefix="og: http://ogp.me/ns#" class="no-js ie8 lte9 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html prefix="og: http://ogp.me/ns#" class="no-js ie9 lte9"> <![endif]-->
+<!--[if IE 10]>    <html prefix="og: http://ogp.me/ns#" class="no-js ie10 lte10"> <![endif]-->
+<!--[if gt IE 10]> <html prefix="og: http://ogp.me/ns#" class="no-js"> <![endif]-->
+<!--[if !IE]><!--> <html prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"8670df0cad","applicationID":"4816049","transactionName":"bwQGZEoHXUVYVhdcX1ZOKWZ7SXJETVwAWVV7DgpESglfWlxHTHRCTAgHXF0=","queueTime":15,"applicationTime":691,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"8670df0cad",applicationID:"4816049"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+
+	
+	    <title>There’s no perfect replacement for cookies | Campaign US</title>
+		<meta name="description" content="Here’s how brands can move forward in a cookieless world.. From Campaign US"/>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+    
+    
+	
+		<link rel="dns-prefetch" href="//static.campaignlive.com" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="dns-prefetch" href="//cached.imagescaler.hbpl.co.uk" />
+		<link rel="dns-prefetch" href="//cached.offlinehbpl.hbpl.co.uk" />
+		<link rel="dns-prefetch" href="//api.hbpl.co.uk" />
+	   <link rel="preconnect" href="//static.campaignlive.com" />
+	   <link rel="preconnect" href="//ajax.googleapis.com" />
+	   <link rel="preconnect" href="//cached.imagescaler.hbpl.co.uk" />
+	   <link rel="preconnect" href="//cached.offlinehbpl.hbpl.co.uk" />
+	   <link rel="preconnect" href="//api.hbpl.co.uk" />
+
+	
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+
+
+	
+    
+    
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#FFFFFF">
+
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#c5001d">
+<meta name="theme-color" content="#ffffff">
+
+
+	
+
+	
+
+	
+		<meta name="com.silverpop.brandeddomains" content="campaignlive.com" /> 
+	
+
+
+	<!--[if (gte IE 6)&(lte IE 8)]><link rel="stylesheet" type="text/css" title="slvzr-ignore" href="/css/min/_Layout_IeSlvzrIgnore_CmgLayoutMediaProvider_C5C52B68A2CFAFD35C6F2AF435EFB428.css" /><![endif]--><link rel="stylesheet" type="text/css" href="https://static.campaignlive.com/css/min/_Layout_Universal_CmgLayoutMediaProvider_D0EC1D4AEC74ADF2C00F24D48111115E.css" />
+	
+	
+    
+
+	<!--[if !(lt IE 9)]><!-->
+<link rel="stylesheet" type="text/css" href="https://static.campaignlive.com/css/min/article_F0FC98517EAC09FF31CAA5079AB4A3F7.css" />	<!--<![endif]-->
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<link rel="stylesheet" type="text/css" href="/css/min/article_F0FC98517EAC09FF31CAA5079AB4A3F7.css" />
+	<![endif]--> 
+
+
+    
+
+
+    
+
+
+	
+    
+    <!--[if IE]>
+<link rel="stylesheet" type="text/css" href="/css/min/_IE_5778D89B5B2B865EBABA3B2CE9C1CC30.css" />    <![endif]-->
+
+		<script type="text/javascript" charset="utf-8">
+		var ContentInfo = {
+			Site:{"Domain":"campaignlive.com","SiteFormat":"responsive"},
+			Article:{"Id":1710285,"Title":"There’s no perfect replacement for cookies","ArticleDate":"2021-03-17T13:52:00+00:00","PublishedDate":"2021-03-17T13:55:47+00:00","ModifiedDate":"2021-03-19T12:56:02+00:00","JournalCode":"CUS","AuthorName":"Yuting Zhang","AuthorUrl":"","ShareUrl":"https://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285","HasAssets":false,"RelatedLinks":[],"GatedLogin":false,"ArticleAge":27,"Thumbnail":{"Label":"Getty Images","FileName":"cookies.jpg","Path":"\\\\san\\Media\\websites\\offLine_HBPL\\news\\SUC\\cookies.jpg","Directory":"\\\\san\\Media\\websites\\offLine_HBPL\\news\\SUC\\","Url":"https://cached.offlinehbpl.hbpl.co.uk/news/SUC/cookies.jpg","Extension":"jpg","JournalCode":"CUS"},"MainImageHeight":0,"MainImageWidth":0,"TagGroups":[{"TagGroupId":76,"ArticleTagIds":[8809,8813],"PathToPrimaryTagId":[8809],"TopLevelTagIds":[8809],"SubLevelTagIds":[8813]},{"TagGroupId":8,"ArticleTagIds":[2876,2913],"PathToPrimaryTagId":[2876,2913],"TopLevelTagIds":[2876],"SubLevelTagIds":[2913]},{"TagGroupId":72,"ArticleTagIds":[6879],"PathToPrimaryTagId":[6879],"TopLevelTagIds":[6879],"SubLevelTagIds":[]},{"TagGroupId":157,"ArticleTagIds":[12063],"PathToPrimaryTagId":[12063],"TopLevelTagIds":[12063],"SubLevelTagIds":[]}],"NewsType":{"Name":"Opinion","Id":203},"TagHierarchy":[{"Id":157,"Name":"Access Shared","Children":[{"Id":12063,"Name":"Metered content","Children":[]}]},{"Id":8,"Name":"Exposure","Children":[{"Id":2876,"Name":"North America","Children":[{"Id":2913,"Name":"United States","Children":[]}]}]},{"Id":76,"Name":"Section","Children":[{"Id":8809,"Name":"Opinion","Children":[{"Id":8813,"Name":"Technology","Children":[]}]}]},{"Id":72,"Name":"Site location","Children":[{"Id":6879,"Name":"US","Children":[]}]}],"CommentCount":0,"TagDataForGtm":{"157":{"groupId":157,"groupName":"Access Shared","primaryTagPath":"12063 Metered content","allGroupTags":"12063"},"8":{"groupId":8,"groupName":"Exposure","primaryTagPath":"2876 North America|2913 United States","allGroupTags":"2876,2876|2913"},"76":{"groupId":76,"groupName":"Section","primaryTagPath":"8809 Opinion|8813 Technology","allGroupTags":"8809,8809|8813"},"72":{"groupId":72,"groupName":"Site location","primaryTagPath":"6879 US","allGroupTags":"6879"}}},
+Magazine:{"JournalCode":"CMG","Url":"http://www.campaignlive.com/","PublisherName":"Campaign Global 2014","PublisherLogoHeight":0,"PublisherLogoWidth":0,"SiteCatalystSitePrefix":"CMG"},
+PageInfo:{"DartZoneName":"/page/us/just published on campaign/article","PageName":"cmg:us:just published on campaign:article:article-1710285","Hierarchy":"cmg:us:just published on campaign:article:1710285","DartHostName":"cmg.main","PageUrl":"us/just-published-on-campaign","ContentInfoType":3}
+		}
+	</script>
+
+	
+    
+    <script type="text/javascript">ContentInfo.Article.Gated = false; ContentInfo.Article.SocialMediaScripts = true;</script>
+    
+
+    
+        <script>
+            var settings = {
+                socialSettings: { "PublisherKey": "6kt6p3tpsba8r8v6f8m8", "TwitterHandle": "campaignliveus" }
+            };
+        </script>
+
+
+
+    <script type="text/javascript" charset="utf-8">
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(ContentInfo);
+    </script>
+
+
+            <!-- Google Tag Manager -->
+            <script>(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start':
+            new Date().getTime(), event: 'gtm.js'}); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=7Q54N5b4p6gxrB23fkEdgA&gtm_preview=env-2&gtm_cookies_win=x'; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MJ46PWR');</script>
+            <!-- End Google Tag Manager -->
+
+<script type="text/javascript" src="https://static.campaignlive.com/js/min/modernizr_F645DB2D08433AFE645D1319A4217EEF.js"></script>			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="/_hbi_ui/basesitenet/js/libs/selectivizr-min.js"></script>
+			<script type="text/javascript" src="/_hbi_ui/basesitenet/js/libs/respond.min.js"></script>
+		<![endif]-->
+		<!--[if (IE 7)]>
+			<script type="text/javascript" src="/js/ie7.js"></script>
+		<![endif]--> 
+
+
+	
+
+
+
+    
+<script type="application/ld+json">
+    [{
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": "https://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285",
+    "headline": "There’s no perfect replacement for cookies",
+    "image": {
+    "@type": "ImageObject",
+    "url": "https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/815/?sUrl=https://cached.offlinehbpl.hbpl.co.uk/news/SUC/cookies.jpg",
+    "height": 480,
+    "width": 815
+    },
+    "datePublished": "2021-03-17T13:55:47Z",
+    "dateModified": "2021-03-19T12:56:02Z",
+    "description": "Here’s how brands can move forward in a cookieless world.",
+        
+            "author":{
+            "@type": "Person",
+            "name": "Yuting Zhang",
+            "url": ""
+            },
+        
+    "articleSection": "Opinion",
+    "publisher": {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Campaign",
+    "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.campaignlive.com/img/logoSmall.gif"
+    },
+    "sameAs": ["https://www.facebook.com/CampaignUS","https://twitter.com/Campaignliveus","https://www.linkedin.com/company/campignliveus"]
+    },
+    "isAccessibleForFree":"True",
+    "hasPart": [
+            
+            {
+            "@type": "WebPageElement",
+            "isAccessibleForFree": "True",
+            "cssSelector":".ArticleBodyPaywall"
+            }
+        
+             ,
+        
+            {
+            "@type": "WebPageElement",
+            "isAccessibleForFree": "True",
+            "cssSelector":".SocialMediaPaywall"
+            }
+        
+    ]
+    }
+    ]
+</script>
+                <link rel="alternate" hreflang="en" href="https://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285" />
+            <link rel="alternate" hreflang="en-US" href="https://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285" />
+
+
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Campaignliveus" />
+    <meta name="twitter:url" content="https://www.campaignlive.com/article/1710285" />
+    <meta name="twitter:description" content="Here’s how brands can move forward in a cookieless world." />
+    <meta name="twitter:title" content="There’s no perfect replacement for cookies" />
+        <meta name="twitter:image" content="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/815/cached.offlinehbpl.hbpl.co.uk/news/SUC/cookies.jpg" />
+    
+    <meta property="og:title" content="There’s no perfect replacement for cookies" />
+    <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285?utm_source=website&utm_medium=social" />
+        <meta property="og:image" content="https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/SUC/cookies.jpg" />
+    
+    
+
+
+</head>
+            <body>
+  
+    
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJ46PWR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="outerWrap">
+
+
+    <div class="a11y">
+        <ul>
+            <li><a href="#main" accesskey="s">Skip to Content</a></li>
+            <li><a href="#responsiveNavigation" accesskey="1">Skip to Main Navigation</a></li>
+            <li><a href="#topNav" accesskey="3">Skip to Information Links</a></li>
+            <li><a href="#topSearchForm" accesskey="4">Skip to Site Search</a></li>
+            <li><a href="#mainFooter" accesskey="5">Skip to Footer</a></li>
+            <li><a href="/accessibility" accesskey="6">Skip to Accessibility Information</a></li>
+            <li><a href="/" accesskey="h">Home Page</a></li>
+        </ul>
+    </div>
+
+    
+
+    <div id="container" class="page-main-content-tracked">
+
+
+
+        
+    <div id="advertTop">
+        <div id="t101Ad" class="commercialSlot" data-location-code="T" data-sizes="970x250|728x90"></div>
+
+    </div>
+
+<div id="sl701Ad" class="commercialSlot" data-location-code="SL" data-sizes="340x1080"></div>
+
+<div id="sr702Ad" class="commercialSlot" data-location-code="SR" data-sizes="341x1080"></div>
+
+
+
+
+        
+        
+        
+        <div id="wrap" class="clearfix">
+                <header id="masthead">
+                    
+                    
+
+
+
+
+    <div class="inner clearfix">
+
+        <h2 class="a11y">Information Links</h2>
+        <nav id="globalFollow" class="subNav followUs">
+            <span class="mobHide">Follow us:</span>
+            <ul>
+
+                    <li>
+                        <a href="https://www.facebook.com/CampaignUS">
+                            <img src="https://static.campaignlive.com/img/icons/facebookDark.png" width="11" alt="Facebook" />
+                            <span class="mobShow">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Campaignliveus">
+                            <img src="https://static.campaignlive.com/img/icons/twitterDark.png" width="20" alt="Twitter" />
+                            <span class="mobShow">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/campignliveus">
+                            <img src="https://static.campaignlive.com/img/icons/linkedinDark.png" width="18" alt="LinkedIn" />
+                            <span class="mobShow">LinkedIn</span>
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+        <div id="navControl" class="mobShow">
+            <a href="#" class="mobNavButton"><img src="https://static.campaignlive.com/img/buttons/menu.png" alt="Menu" /></a>
+        </div>
+        <nav id="topNav" class="subNav">
+            <ul id="accountActions">
+                <li id="signInOut" class="mobile">
+        <a href="/login?returnUrl=http://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285?dcmp=emc-conthecampaignfix&amp;bulletin=the-campaign-fix" title="Sign in" class="nav__link">Sign in</a>
+
+                </li>
+
+
+                <li id="register" class="mobile">
+        <a href="http://www.campaignlive.com/register/?returnUrl=http://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285?dcmp=emc-conthecampaignfix&amp;bulletin=the-campaign-fix" title="Register" class="nav__link">Register</a>
+                </li>
+
+
+
+               
+                    <li id="bulletins" class="mobile">        <a href="https://www.campaignlive.com/email-bulletins" title="Bulletins" class="nav__link">Bulletins</a>
+</li>
+                
+                    <li         class="cms ">
+
+            <a href="/subscribe" title="Subscribe" class="nav__link">Subscribe</a>
+    </li>
+    <li         class="cms ">
+
+            <a href="/about-us" title="About Campaign" class="nav__link">About Campaign</a>
+    </li>
+
+            </ul>
+            
+        </nav>
+
+        
+	<div class="magGlass" id="mobSearch">Search</div>
+
+<a href="https://www.campaignlive.com/" id="title">
+	<h2>
+		<span>Campaign</span>
+	</h2>
+</a>
+
+
+
+	<div id="siteSearch">
+<form action="/search" class="searchForm" id="topSearchForm" method="get">			<div class="searchFields">
+				
+				<input accesskey="4" id="searchPhrase" name="KeyWords" placeholder="Type to search here" tabindex="1" type="text" value="" />
+				<input type="submit" class="searchSubmit" value="Search" />
+			</div>
+	<nav id="searchDropdown">		
+				<div class="clearfix">
+							
+				</div>
+	
+</nav>
+</form>	</div>
+
+
+
+
+        
+        <div id="responsiveNavigation">
+            <div id="mobNavHeader" class="mobShow">
+                <a id="mobNavLogo" href="/"><img src="https://static.campaignlive.com/img/logoSmall.gif" width="159"></a>
+                <a href="#" class="mobNavButton"><img src="https://static.campaignlive.com/img/buttons/menu.png" alt="Menu" /></a>
+            </div>
+            <h2 class="a11y">Main Navigation</h2>
+
+
+                    <nav id="primaryNav" >
+                        <ul>
+                                <li id="primaryNav-0" class="navCurrent first">
+                                            <a href="/us/just-published-on-campaign" title="News">News</a>
+                                </li>
+                                <li id="primaryNav-1" >
+                                            <a href="/creative-work" title="Creative">Creative</a>
+                                </li>
+                                <li id="primaryNav-2" >
+                                            <a href="/us/campaign-us-thought-leaders" title="Opinion">Opinion</a>
+                                </li>
+                                <li id="primaryNav-3" class="last">
+                                            <a href="http://www.campaignlive.com/events" title="Events">Events</a>
+                                </li>
+                        </ul>
+                    </nav>
+                    <nav id="subNav-2" class="subNav ">
+                        <ul>
+                                <li  class="first">
+                                            <a href="/us/campaign-us-thought-leaders/brands" title="Modern Brand">Modern Brand</a>
+                                </li>
+                                <li  >
+                                            <a href="/us/campaign-us-thought-leaders/creativity" title="Provocative Minds">Provocative Minds</a>
+                                </li>
+                                <li  >
+                                            <a href="/us/campaign-us-thought-leaders/culture" title="People and Culture">People and Culture</a>
+                                </li>
+                                <li  >
+                                            <a href="/us/campaign-us-thought-leaders/technology" title="Technology">Technology</a>
+                                </li>
+                                <li  class="last">
+                                            <a href="/us/campaign-us-thought-leaders/media" title="Media">Media</a>
+                                </li>
+                        </ul>
+                    </nav>
+
+        </div>
+
+
+
+    </div>
+
+
+
+                </header>
+
+            
+
+            <hr class="a11y" />
+
+            
+
+
+
+
+
+		<nav class="clearfix inner" id="trendingNav">
+			<ul>
+				<li class="trendingNavTitle">Trending:</li>
+				    <li         class="cms ">
+
+            <a href="https://www.campaignlive.com/campaign-savvy" title="Campaign Savvy" class="nav__link">Campaign Savvy</a>
+    </li>
+    <li         class="cms ">
+
+            <a href="https://www.campaignlive.com/article/campaign-us-power-purpose-awards-open-entry/1709569" title="Power of Purpose" class="nav__link">Power of Purpose</a>
+    </li>
+    <li         class="cms ">
+
+            <a href="https://www.campaignlive.com/us/campaign-chemistry-podcast" title="Campaign Chemistry" class="nav__link">Campaign Chemistry</a>
+    </li>
+    <li         class="cms ">
+
+            <a href="https://www.campaignlive.com/us/womens-history-month-spotlights" title="WHM spotlights" class="nav__link">WHM spotlights</a>
+    </li>
+    <li         class="cms ">
+
+            <a href="https://www.campaignlive.com/preview/article/1710846/revealed-campaign-us-media-awards-shortlist" title="Media Awards" class="nav__link">Media Awards</a>
+    </li>
+
+			</ul>
+		</nav>
+	    
+
+
+            <section id="main" role="main">
+                
+
+
+
+
+
+                        <div id="gridMain">
+                            <div class="group1">
+                                <div class="zoneGrid2">
+                                        <div class="grid1">
+                                            <div class="zone">
+                                                <!-- zone 2 -->
+
+
+
+
+
+
+    <article id="articleDetail">
+        <div id="articleFull">
+            <div id="articleMain">
+
+
+
+                
+                <header>
+                    <h1>There’s no perfect replacement for cookies</h1>
+
+                        <div class="byline author">
+
+        				 by Yuting Zhang
+
+
+            <em>March 17, 2021</em>
+
+    </div>
+
+                </header>
+
+                <div id="hero">
+        <figure>
+            <img alt="Getty Images" src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/815/cached.offlinehbpl.hbpl.co.uk/news/SUC/cookies.jpg" />
+                <figcaption>Getty Images</figcaption>
+        </figure>
+                </div>
+
+                <p class="summary">Here’s how brands can move forward in a cookieless world.</p>
+
+                
+
+                <div id="articleWrap">
+                    <div id="articleBody">
+
+                            <div class="ArticleBodyPaywall">
+                                <p dir="ltr">Ever since Google said it would phase out support for third-party cookies in Chrome, marketers and agencies have been scrambling to find a replacement.&#160;&#160;</p><p dir="ltr">Every vendor suddenly has a solution: this ID, that link. &#8220;Don&#8217;t sweat it,&#8221; one vendor told me. &#8220;We&#8217;ve got it all figured out.&#8221; Regardless of what ad tech sales reps say, deep down, we all know this magical solution does not exist (yet).&#160;&#160;</p><p dir="ltr">So besides refining their infrastructure to collect first-party data and spending more money with walled gardens that can offer granular measurement, what can marketers do?</p><h3>Accept reality &#8212; and take action</h3><p dir="ltr">The reality is that there is no perfect replacement for cookies.&#160;</p><p dir="ltr">Keep talking to ad tech innovators about new solutions, but also focus on what you can do right now: implement proven strategies and technology that already exist, and think more creatively about content development.&#160;&#160;</p><h3 dir="ltr">Focus on creative quality</h3><p dir="ltr">We&#8217;re helping a top brand in the hospitality industry understand how the new ad environment could impact creative performance. This client invests a lot of time and resources on creative, but often can&#8217;t measure the impression it made on customers.&#160;</p><p dir="ltr">&#160;We&#8217;ve helped the client understand whether it&#8217;s the creative, the audience, the publisher or the sheer volume of impressions &#8211; or all of the above &#8211; that results in better performance.</p><p dir="ltr">By using tools such as Adelaide&#8217;s attention metric, we can quantify the quality of their ads. Without third-party cookies, correlating attention metrics to untrackable view-through conversions becomes possible.</p><h3 dir="ltr">Invest in production</h3><p dir="ltr">Media agencies and marketers often overlook production. Clients ask for creative best practices, but how would we know, for example, that green text on a white background outperforms white text on a green background?&#160;&#160;</p><p dir="ltr">Providers like Cortex, which can identify and analyze creative&#8217;s visual and contextual components to determine which elements drive performance, might be able to help.&#160;&#160;</p><p dir="ltr">Website quality also can&#8217;t be ignored. More often than not, websites render more ads than content, which mars the overall experience. Great site design goes hand-in-hand with memorable ad experiences.&#160;</p><p>Revamp your tech stack</p><p dir="ltr">As cookies go away, your current tech stack may not suffice. Now is the perfect opportunity to reassess.&#160;</p><p dir="ltr">I hear you: vetting and onboarding tech partners is time consuming. But ad tech is always changing and requires constant attention and maintenance. Ask yourself: are your tech partners adding enough value to justify the cost? Are you too reliant on one partner or idea?&#160;</p><h3 dir="ltr">Build strong relationships</h3><p dir="ltr">Revitalize those old-fashioned PMP deals with a few premium publishers that drive results. Establish direct relationships and negotiate deals (like the good ol&#8217; days).&#160;&#160;</p><p dir="ltr">Publishers that have their own marketplaces and creative studios, such as Vox&#8217;s Concert, are great resources. Their wide reach and creative capabilities come in handy when deploying high-impact units designed for that publisher&#8217;s sites.</p><h3 dir="ltr">The bottom line</h3><p>With cookies out of the picture, marketers and agencies have an opportunity to get back to basics and focus on creative and publisher relationships.&#160;</p><p dir="ltr">Change opens the door to future opportunities. Cookies aren&#8217;t going to be around much longer. Instead of putting all of your faith into imperfect replacements, get to work creating an ad experience that resonates.&#160;</p><p dir="ltr"><em>Yuting Zhang, Senior Biddable Strategist, Media Kitchen</em></p>
+                            </div>
+
+                        <div id="articleEnd"></div>
+
+                            <div class="tags">
+                                <header>Tags</header>
+                                
+
+          <div>
+	          <ul id="theWorkTags" class="clearfix">
+
+	          </ul>
+          </div>
+
+
+
+
+
+
+                            </div>
+
+                    </div>
+
+
+
+                        <div class="socialShare display-b">
+                                <div class="SocialMediaPaywall">
+                                        <aside class="sharingTools genericModule">
+            <div class="sharingToolWrap">
+    <div class="tweetShare share">
+        <a href="http://twitter.com/share" data-url="https://www.campaignlive.com/article/1710285" data-counturl="https://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285" class="twitter-share-button" data-count="horizontal" data-via="campaignliveus">Tweet</a>
+    </div>
+    <div class="facebookShare share">
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="https://www.campaignlive.com/article/1710285" data-layout="button" data-size="large" data-mobile-iframe="true">
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.campaignlive.com/article/1710285&t=There%e2%80%99s+no+perfect+replacement+for+cookies" title="facebook" class="fb-xfbml-parse-ignore"></a>
+        </div>
+    </div>
+    <div class="linkedinShare share">
+        <script type="in/share" data-url="https://www.campaignlive.com/article/1710285" data-counter="right" data-onsuccess="linkedInShare">
+        </script>
+    </div>
+            </div>
+    </aside>
+
+                                </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="articleRelated">
+
+
+                <div>
+
+                </div>
+
+            </div>
+        </div>
+
+        
+    </article>
+
+
+
+
+
+<img src="https://api.hbpl.co.uk/Article/ViewCount/1710285" width="1" height="1" />
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="group2 grid1">
+                                <div class="zone">
+                                    <!-- zone 5 -->
+                                    	<div class="textHtmlModule">
+		<div class="promo promoTitleText">
+  <h3>
+	<a href="https://www.campaignlive.com/subscribe">
+	  Subscribe today for just $116 a year 
+	</a>
+	<span style="font-size: 1.2rem; line-height: 1.16;">
+	  <br>
+	</span>
+  </h3>
+  <p>
+	Get the very latest news and insight from 
+	<em>
+	  Campaign 
+	</em>
+	with unrestricted access to 
+	<a href="https://www.campaignlive.com">
+	  campaignlive.com
+	</a>
+	, plus get exclusive discounts to 
+	<em>
+	  Campaign 
+	</em>
+	events 
+	<em>
+	</em>
+  </p>
+  <a href="https://www.campaignlive.com/subscribe" class="moreLink">
+	Become a subscriber 
+  </a>
+</div>
+
+	</div>
+	<div class="textHtmlModule">
+		<div class="promo promoTitleText">
+  <h3>
+	<a title="Sign up free for bulletins" href="http://users.campaignlive.com/register?HAYILC=rightcol_fix">
+	  GET YOUR CAMPAIGN DAILY FIX 
+	</a>
+  </h3>
+  <p>
+	The latest work, news, advice, comment and analysis, sent to you every day
+  </p>
+  <a class="moreLink" title="Sign up free for bulletins" href="http://www.campaignlive.com/register">
+	register free
+  </a>
+</div>
+<p>
+</p>
+
+	</div>
+	<div class="textHtmlModule">
+		<div class="socialbar box w400 center">
+  <h3 class="h x-large">
+	<em>
+	  Follow us 
+	</em>
+  </h3>
+  <a href="http://www.twitter.com/Campaignliveus" class="moreLink" target="_blank">
+	<i class="fa fa-twitter fa-lg" aria-hidden="true">
+	</i>
+	@Campaignliveus 
+  </a>
+  <a href="http://www.facebook.com/CampaignUS" class="moreLink" target="_blank">
+	<i class="fa fa-facebook fa-lg" aria-hidden="true">
+	</i>
+	CampaignUS 
+  </a>
+</div>
+
+	</div>
+<div id="r1301Ad" class="commercialSlot" data-location-code="R1" data-sizes="300x250|300x600"></div>
+<div id="r2302Ad" class="commercialSlot" data-location-code="R2" data-sizes="300x250|300x600"></div>
+
+                                </div>
+                            </div>
+                    <div class="groups">
+                        
+                    </div>
+                    </div>
+            <div id="gridBottom" class="grid1 gridFull">
+                <div class="zone">
+                    <!-- zone 13 -->
+                    	<div class="textHtmlModule">
+		<p>
+  <script src="https://platform.twitter.com/widgets.js" async="" charset="utf-8" type="text/javascript">
+	// 
+	// 
+  </script>
+  <script async="" defer="defer" src="https://platform.instagram.com/en_US/embeds.js" type="text/javascript">
+	// 
+	// 
+  </script>
+  <script>
+	$('a[href^="http://"]').not('a[href*=campaignlive]').attr('target','_blank');
+  </script>
+</p>
+
+	</div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            </section>
+            
+    
+
+
+            
+<div id="advertBodyBottom">
+	<div id="f201Ad" class="commercialSlot" data-location-code="F" data-sizes="728x90"></div>
+
+	<div id="x601Ad" class="commercialSlot" data-location-code="X" data-sizes="1x1"></div>
+<div id="x602Ad" class="commercialSlot" data-location-code="X" data-sizes="1x1"></div>
+<div id="x603Ad" class="commercialSlot" data-location-code="X" data-sizes="1x1"></div>
+
+	<div id="z100Ad" class="commercialSlot" data-location-code="Z" data-sizes="1x1"></div>
+
+</div>
+        </div>
+    </div>
+    <hr class="a11y" />
+            <div class="footerWrap">
+                
+
+
+        <nav class="footerStrip inner clearfix">
+            <ul class="globalFooterBar">
+                <li class="footerStripLink h5 block">Get more from <div class="x-large" style="line-height: 0.8;">Campaign US</div></li>
+                <li class="footerStripLink h5 block"><i class="fa fa-3x fa-user" aria-hidden="true" style="line-height: 1;"></i>            <a href="/login?returnUrl=http://www.campaignlive.com/article/theres-no-perfect-replacement-cookies/1710285?dcmp=emc-conthecampaignfix&amp;bulletin=the-campaign-fix" title="Sign in">Login <em class="h3">My Account <span class="reset-size linkPrompt linkPrompt-Light">&gt;</span></em></a>
+</li>
+                <li class="footerStripLink h5 block"><i class="fa fa-3x fa-envelope-o" aria-hidden="true" style="line-height: 0.9;"></i>            <a href="https://www.campaignlive.com/email-bulletins" title="Bulletins"> Sign up to our <em class="h3">Bulletins<span class="reset-size linkPrompt linkPrompt-Light">&gt;</span></em></a>
+</li>
+            </ul>
+        </nav>
+
+
+
+
+            </div>
+        <div id="footerWrap">
+            <footer id="mainFooter" class="clearfix">
+                
+                
+                
+
+
+
+
+
+        <div class="footerInfo">
+            <div class="socialbar h3">
+                Follow us
+                <ul class="h5">
+                    <li><a href="https://www.facebook.com/CampaignUS " target="_blank" title="Facebook"><i class="fa fa-lg fa-facebook" aria-hidden="true"   rel="nofollow"  ></i><span class="a11y fa-a11y">Facebook</span></a></li>
+                    <li><a href="https://twitter.com/Campaignliveus " target="_blank" title="Twitter"   rel="nofollow"  ><i class="fa fa-lg fa-twitter" aria-hidden="true"></i><span class="a11y fa-a11y">Twitter</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/campignliveus " target="_blank" title="Linkedin"   rel="nofollow"  ><i class="fa fa-lg fa-linkedin" aria-hidden="true"></i><span class="a11y fa-a11y">Linkedin</span></a></li>
+                    
+                    <li><a href="http://www.campaignlive.com/rss/home" target="_blank" title="RSS"   rel="nofollow"  ><i class="fa fa-lg fa-rss" aria-hidden="true"></i><span class="a11y fa-a11y">RSS</span></a></li>
+                </ul>
+            </div>
+        </div>
+	
+<div id="footerNav">		
+	<div class="footerModuleGroup">			
+			<dl class="footerModule">				
+				<dt>About</dt>
+				<dd>
+					<ul>
+						         <li><a href="/about-us" title="About us" rel="nofollow"  >About us</a></li>
+						         <li><a href="http://www.campaignlive.com/contact-us" title="Contact us" rel="nofollow"  >Contact us</a></li>
+						         <li><a href="/faq" title="FAQs" rel="nofollow"  >FAQs</a></li>
+						         <li><a href="/us/advertise-with-campaign" title="Advertise with us" rel="nofollow"  >Advertise with us</a></li>
+						         <li><a href="http://complaints.haymarket.com/" title="Editorial complaint" rel="nofollow"  >Editorial complaint</a></li>
+						         <li><a href="/rulesforcommenting" title="Community rules" rel="nofollow"  >Community rules</a></li>
+						         <li><a href="/accessibility" title="Accessibility" rel="nofollow"  >Accessibility</a></li>
+						         <li><a href="/safe_senders" title="Safe senders" rel="nofollow"  >Safe senders</a></li>
+						         <li><a href="https://www.haymarket.com/privacy-policy/" title="Privacy notice" rel="nofollow"  >Privacy notice</a></li>
+						         <li><a href="/email-bulletins" title="Newsletters" rel="nofollow"  >Newsletters</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="footerModule">				
+				<dt>Haymarket US</dt>
+				<dd>
+					<ul>
+						         <li><a href="http://www.prweek.com/us" title="PRWeek US" rel="nofollow"  >PRWeek US</a></li>
+						         <li><a href="http://www.mmm-online.com/" title="Medical Marketing &amp; Media" rel="nofollow"  >Medical Marketing &amp; Media</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="footerModule">				
+				<dt>Haymarket Global</dt>
+				<dd>
+					<ul>
+						         <li><a href="http://www.campaignlive.co.uk" title="Campaign UK" rel="nofollow"  >Campaign UK</a></li>
+						         <li><a href="http://www.campaignasia.com" title="Campaign Asia" rel="nofollow"  >Campaign Asia</a></li>
+						         <li><a href="http://www.campaignindia.in/" title="Campaign India" rel="nofollow"  >Campaign India</a></li>
+						         <li><a href="http://www.campaignme.com" title="Campaign Middle East" rel="nofollow"  >Campaign Middle East</a></li>
+						         <li><a href="http://www.campaigntr.com" title="Campaign Turkey" rel="nofollow"  >Campaign Turkey</a></li>
+						         <li><a href="http://www.prweek.com" title="PR Week" rel="nofollow"  >PR Week</a></li>
+					</ul>
+				</dd>
+			</dl>
+	</div>
+	
+</div>
+
+<div id="copyright" class="copyright copyright--stretch">
+    <div class="colWrapper">
+        <div class="col">
+            <a id="haymarketLogo" title="Haymarket" href="http://www.haymarket.com"   rel="nofollow"  >
+                <img alt="Haymarket" src="/_hbi_ui/basesitenet/img/responsive/logoHaymarket.svg" />
+            </a>
+            &copy; Haymarket Media Group Ltd. | <a href="http://www.haymarket.com/terms-and-conditions" title="Terms &amp; Conditions" rel="nofollow">Terms &amp; Conditions</a> | <a href="https://www.haymarket.com/privacy-policy/#heading-cookies" title="Cookie Notice" rel="nofollow">Cookie Notice</a> | <a href="http://www.haymarket.com/privacy-policy" title="Privacy Notice" rel="nofollow">Privacy Notice</a>
+        </div>
+        <div class="col">
+            <a id="ipso" title="IPSO" href="https://www.ipso.co.uk/what-we-do/"   rel="nofollow"  >
+                <img alt="IPSO" src="/_hbi_ui/basesitenet/img/responsive/ipso.svg" />
+            </a>
+        </div>
+    </div>
+</div>
+
+            </footer>
+        </div>
+
+
+
+</div>
+
+	
+<script type="text/javascript" src="https://static.campaignlive.com/js/min/_Layout_Universal_CmgLayoutMediaProvider2A12206C5FAB4077324626B28500C13B.js"></script>
+
+
+    
+
+    
+<script type="text/javascript" src="https://static.campaignlive.com/js/min/articleReadNextBD32783FD0AE5DEAE993341DE534D8EF.js"></script>
+
+
+
+
+    
+
+
+
+
+</body>
+</html>

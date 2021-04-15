@@ -1,0 +1,591 @@
+<!DOCTYPE html><html lang="en"><head><title>What We Can Learn from China&#39;s Use of Facial Recognition Tech 08/23/2019</title><meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"1337ba3bce",applicationID:"3584061"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"1337ba3bce","applicationID":"3584061,1132078","transactionName":"MQFXMBAACxdSUUxdDQhLcxEMAhENXFwXRBcECFwHAxUMC11BFkILAxNGXgMTEQ1QXl0=","queueTime":2,"applicationTime":199,"agent":""}</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="description" content="What We Can Learn from China&#39;s Use of Facial Recognition Tech - 08/23/2019"><meta name="keywords" content="One company is using &quot;Smile To Pay&quot; at KFCs in Hangzhou., China. This product allows customers to complete their payments by smiling in front of the restaurant&#39;s self-service kiosks. 08/23/2019"><!-- twitter card --><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@mediapost"><meta name="twitter:url" content="https://www.mediapost.com/publications/article/339667/what-we-can-learn-from-chinas-use-of-facial-recog.html"><meta name="twitter:title" content="Marketing Insider: What We Can Learn from China&#39;s Use of Facial Recognition Tech"><meta name="twitter:description" content="One company is using &quot;Smile To Pay&quot; at KFCs in Hangzhou., China. This product allows customers to complete their payments by smiling in front of the restaurant&#39;s self-service kiosks."><!-- end twitter card --><!-- facebook --><meta property="fb:admins" content="503855435" /><meta property="fb:admins" content="500591163" /><meta property="og:url" content="https://www.mediapost.com/publications/article/339667/what-we-can-learn-from-chinas-use-of-facial-recog.html" /><meta property="og:title" content="What We Can Learn from China&#39;s Use of Facial Recognition Tech" /><meta property="og:description" content="One company is using &quot;Smile To Pay&quot; at KFCs in Hangzhou., China. This product allows customers to complete their payments by smiling in front of the restaurant&#39;s self-service kiosks." /><meta property="og:type" content="website" /><meta property="og:image" content="https://s3.amazonaws.com/static.mediapost.com/publications/images/mp-logo-fb.jpg" /><!-- end faceboook --><meta name="viewport" content="initial-scale=1, maximum-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1"><script src='https://www5.smartadserver.com/config.js?nwid=1909' type="text/javascript"></script><script type="text/javascript">
+    sas.setup({ domain: 'https://www5.smartadserver.com', async: true, renderMode: 0, inSequence: true});
+    //  renderMode define when ads must be rendered :
+    //      - DEFAULT       (0) : as soon as ad is ready
+    //      - READY         (1) : render ads when document is ready
+    //  - ON_DEMAND     (2) : user must call sas.callAds()
+</script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='/static/js/jquery.min-1.9.1.js' type='text/javascript'%3E%3C/script%3E")); }
+</script><script src="https://s3.amazonaws.com/static.mediapost.com/js/jquery.colorbox-min-1.4.27.js"></script><script>
+    /* Twitter */
+    function tw_click(u, t, article_id, start_shares) {
+        window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(u)+'&text='+encodeURIComponent(t),'share','toolbar=0,status=0,width=626,height=436');
+        return false;
+    }
+
+    /* Facebook */
+    function fbs_click(u, t, article_id, start_shares) {
+        window.open('https://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'share','toolbar=0,status=0,width=626,height=436');
+        return false;
+    }
+
+    /* Google+ */
+    function gos_click(u, t, article_id, start_shares) {
+        window.open('https://plus.google.com/share?url='+encodeURIComponent(u),'share','toolbar=0,status=0,width=626,height=436');
+        return false;
+    }
+
+    /* LinkedIn */
+    function lis_click(u, t, article_id, start_shares) {
+        window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(u) + '&title=' + encodeURIComponent(t) + '&summary=' + '&source=', 'share', 'toolbar=0,status=0,width=626,height=436');
+        return false;
+    }
+</script><!-- Comment Subscription JS --><script type="text/javascript">
+        var commentsubscriptionUrl = "/publications/article/commentsubscribe/";
+        
+    </script><script src="https://s3.amazonaws.com/static.mediapost.com/js/commentsubscribe.js"></script><!-- End Comment Subscription JS --><!-- AJAX in appropriate HTML block for commenting --><script>
+
+        // We're using .ajax() instead of .getScript() because getScript() doesn't cache the script
+        // by default.
+        function load_tinymce() {
+            $.ajax({
+                url: "/static/js/tiny_mce.4.1.9/tinymce.min.js",
+                dataType: "script",
+                cache: true,
+                crossDomain: true,
+            }).done(function() {
+                tinyMCE.init({
+                    plugins: 'paste',
+                    selector: 'textarea',
+                    theme : 'modern',
+                    menubar : false,
+                    toolbar: 'bold italic bullist numlist blockquote',
+                    forced_root_block: false,
+                    paste_as_text: true,
+                });
+            });
+        }
+
+        function call_commentform(articleID) {
+            var commentForm = "#comment-form-" + articleID;
+            var commentFormURL = "/publications/article/" + articleID + "/commentform/"
+
+            return $.ajax({
+                type: "GET",
+                url: commentFormURL,
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function(response) {
+                    $(commentForm).html(response.html);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            $("body").on("click", ".leave-comment", function(){
+                var articleID = $(this).attr("id").split("-")[2];
+                $(this).hide();
+                call_commentform(articleID).done(function() {
+                    load_tinymce();
+                });
+            });
+
+            $("body").on("click", ".reply", function(event){
+                event.preventDefault();
+                var articleID = $(this).attr("id").split("-")[1];
+                var parentID = $(this).attr("id").split("-")[2];
+                var commentsMain = "#comments-main-" + articleID;
+                var form = "#form-" + articleID;
+                var parentInput = "#id_parent-" + articleID;
+
+                // get comment form; make sure it completes before setting the parent id in the hidden
+                // input field of the loaded form
+                $.when(call_commentform(articleID)).done(function(data) {
+                    $(form).find(parentInput).attr("value", parentID);
+                    load_tinymce();
+                });
+
+                $('html, body').animate({
+                    scrollTop: $(commentsMain).offset().top -70
+                }, 600);
+            });
+        });
+    </script><script src="https://s3.amazonaws.com/static.mediapost.com/publications/js/jquery.waypoints.min-4.0.1.js"></script><script>
+        $(document).ready(function () {
+
+            function readCounter(article_id) {
+                var article_url="https://basie.mediapost.com/article/" + article_id + ".jpg?hashid="
+
+                $.ajax({
+                    type: "GET",
+                    dataType: "jsonp",
+                    url: article_url
+                });
+            }
+
+            function bindArticleWaypoints($item) {
+                $item.waypoint(function (direction) {
+                    if (direction === "down") {
+
+                        // grab es parameters
+                        var es_url = $(this.element).attr("data-url");
+                        var es_title = $(this.element).attr("data-title");
+                        var es_start = $(this.element).attr("data-start");
+                        var es_index = $(this.element).attr("data-index");
+
+                        // destroy waypoint binding and remove element from DOM
+                        this.destroy();
+                        $(this.element).removeClass('article-waypoint');
+
+                        $.ajax({
+                            type: "GET",
+                            url: es_url,
+                            data: {
+                                'initial_article': '339667',
+                                'es_index_start': es_start,
+                                'es_index': es_index,
+                                'utm': 'False',
+                                
+                            },
+                            success: function(html){
+                                $("#wrapper-fluid").append(html);
+                            },
+                            beforeSend: function(){
+                                $('.loader').show();
+                            },
+                            complete: function() {
+                                $('.loader').hide();
+                                findArticleWaypoints();
+                                findReadCounterWaypoints();
+                                findAddressWaypoints();
+                                findWidgetWaypoints()
+                                gaTrack(es_url, es_title);
+                            }
+                        });
+                    }
+                }, {
+                    offset: 'bottom-in-view'
+                });
+            }
+
+            function bindReadCounterWaypoints($item) {
+                $item.waypoint(function (direction) {
+                    if (direction === "down") {
+                        var article_id = $(this.element).attr("data-id");
+                        // destroy waypoint binding and remove element from DOM
+                        this.destroy();
+                        $(this.element).removeClass('readcounter-waypoint');
+
+                        readCounter(article_id);
+                    }
+                }, {
+                    offset: 200
+                });
+            }
+
+            function bindAddressWaypoints($item) {
+                $item.waypoint(function (direction) {
+                    if (direction === "down") {
+                        // first, make sure we haven't already set 'prev' data
+                        if ($(this.element).attr("data-prev-url") == '') {
+
+                            // set the prev data based on current location/title
+                            $(this.element).attr("data-prev-url", window.location.pathname);
+                            $(this.element).attr("data-prev-title", document.title);
+                        }
+
+                        // grab "next" data and push it to history/title
+                        var url = $(this.element).attr("data-url");
+                        var title = $(this.element).attr("data-title");
+                        document.title = title;
+                        history.replaceState(null, null, url);
+
+                        $(this.element).find(".widget").addClass('affix');
+                    }
+                    else {
+                        var url = $(this.element).attr("data-prev-url");
+                        var title = $(this.element).attr("data-prev-title");
+
+                        document.title = title;
+                        history.replaceState(null, null, url);
+
+                        var article_id = $(this.element).attr("data-id");
+                        $("#widget-"+article_id).removeClass('affix');
+                    }
+                }, {
+                    offset: 200
+                });
+            }
+            
+            function bindWidgetINWaypoints($item) {
+                $item.waypoint(function (direction) {
+                    var widget_id = $(this.element).attr("data-id");
+
+                    if (direction === "down") {
+                        $(this.element).children(".widget").removeClass('affix');
+                    }
+                    else {
+                        $(this.element).children(".widget").addClass('affix');
+                    }
+                }, {
+                    offset: 'bottom-in-view'
+                });
+            }
+
+            function findArticleWaypoints() {
+                $(".article-waypoint").each(function() {
+                    bindArticleWaypoints($(this));
+                });
+            }
+
+            function findReadCounterWaypoints() {
+                $(".readcounter-waypoint").each(function() {
+                    bindReadCounterWaypoints($(this));
+                });
+            }
+
+            function findAddressWaypoints() {
+                $(".address-waypoint").each(function() {
+                    bindAddressWaypoints($(this));
+                });
+            }
+            
+            function findWidgetWaypoints() {
+                $(".widget-waypoint").each(function() {
+                    bindWidgetINWaypoints($(this));
+                });
+            }
+            
+            function gaTrack(path, title) {
+              ga('set', { page: path, title: title });
+              ga('send', 'pageview');
+            }
+
+            findArticleWaypoints();
+            findWidgetWaypoints();
+
+            
+                readCounter(339667); // counts initial request
+            
+
+        });
+    </script><!-- Click counter ajax --><script>
+        $(document).ready(function() {
+            
+            
+        })
+    </script><link href="https://s3.amazonaws.com/static.mediapost.com/css/bootstrap.min-3.3.6-custom.css" rel="stylesheet"><!-- FONTS --><link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"><script src="https://s3.amazonaws.com/static.mediapost.com/js/bootstrap.min-3.3.6-custom.js"></script><script>
+/* allows mobile safari to show hover and active */
+document.addEventListener("touchstart", function() {},false);
+</script><link href="https://s3.amazonaws.com/static.mediapost.com/publications/css/navbar.css?v=3" rel="stylesheet"><!-- Google Remarketing Tag for MediaPost Site Visitor  --><style> 
+    iframe[name="google_conversion_frame"] { display: none; } 
+</style><script type="text/javascript"> 
+    /* <![CDATA[ */ 
+    var google_conversion_id = 1071024836; 
+    var google_custom_params = window.google_tag_params; 
+    var google_remarketing_only = true; 
+    /* ]]> */ 
+</script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script><noscript><div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071024836/?value=0&amp;guid=ON&amp;script=0"/></div></noscript><script type="text/javascript">
+//Navbar Scroll Event
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop && st > 40){
+       $('.navbar').addClass('navbar-scroll-custom');
+   } else {
+       $('.navbar').removeClass('navbar-scroll-custom');
+   }
+   lastScrollTop = st;
+});
+</script><link href="https://s3.amazonaws.com/static.mediapost.com/css/footer.css?v=2" rel="stylesheet"><style>
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    </style><link rel="stylesheet" href="https://s3.amazonaws.com/static.mediapost.com/publications/css/article.css?v=7"><style>
+        a, .sidebar_group ul li a { color: #046504; }
+        #subscribe_form input[type="submit"] {
+            background-color: #046504;
+            border: 1px solid #046504;
+        }
+        .leave-comment{
+            background-color: #046504;
+            border: 1px solid #046504;
+        }
+        .modal-backdrop.in {
+            opacity: 0.6;
+        }
+    </style><link href="https://s3.amazonaws.com/static.mediapost.com/css/colorbox/colorbox.css" rel="stylesheet"><link href="https://s3.amazonaws.com/static.mediapost.com/favicon.ico" rel="shortcut icon"></head><body><nav class="navbar navbar-fixed-top navbar-inverse"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a onclick="ga('send', 'event', 'topmenu', 'click', 'mplogo', 1);"class="navbar-brand" href="/"></a></div><div class="collapse navbar-collapse" id="navbar-collapse-1"><ul class="nav navbar-nav"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">News<span class="caret"></span></a><ul class="dropdown-menu" id="nav_news"><li><div class="menu"><div class="column"><div class="section"><dl><dt>Current Stories</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_current', 1);" href="/"><span style="font-weight:700;">MediaPost Home</span></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_current', 1);" href="/news/">Today's News</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_current', 1);" href="/opinions/">Today's Opinions</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_current', 1);" href="/publications/mediapost-weekend/">MediaPost Week in Review</a></dd></dl></div><div class="section"><dl><dt>CRISIS REPORT</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news-crisis', 1);" href="/crisis-report/"><b>Covid-19 Impact</b></a></dd></dl></div><div class="section"><dl><dt>Agencies &amp;The Agency Business</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_agency', 1);" href="/publications/mediaposts-agency-daily/"><span style="font-weight:700;">MediaPost's Agency Daily</span></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_agency', 1);" href="/publications/mediapsssst/">MEDIApsssst</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_agency', 1);" href="/publications/accounts-on-the-move/">Accounts in Review</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_agency', 1);" href="/publications/out-to-launch/">Out to Launch</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_agency', 1);" href="/publications/people-on-the-move/">People on the Move</a></dd></dl></div><!--/end section--></div><!--/end column--><div class="column"><div class="section"><dl><dt>Digital Media, Marketing<br>and Advertising</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/digital-news-daily/"><b>Digital News Daily</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/data-programmatic-insider/">Data &amp; Programmatic Insider</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/mobile-insider/">Mobile Insider</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/social-media-insider/">Social Insider</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/video-insider/">Video Insider</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/rtblog/">RTBlog</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/policyblog/">PolicyBlog</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/email-marketing-daily/"><b>Email Marketing Daily</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/email-insider/">Email Insider</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/search-marketing-daily/"><b>Search & Performance Marketing Daily</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_online', 1);" href="/publications/search-insider/">Inside Performance</a></dd></dl></div><!--/end section--></div><!--/end column--><div class="column"><div class="section"><dl><dt>Research</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_research', 1);" href="/publications/research-intelligencer/"><b>Research Intelligencer</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_research', 1);" href="/research/cmmr/">Center for Marketing & Media Research</a></dd></dl></div><!--/end section--><div class="section"><dl><dt>Media Buying/Planning</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_media', 1);" href="/publications/mediadailynews/"><b>MediaDailyNews</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_media', 1);" href="/publications/media-insider/">Media Insider</a></dd></dl></div><!--/end section--><div class="section"><dl><dt>Television</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_tv', 1);" href="/publications/television-news-daily/"><b>TelevisionNewsDaily</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_tv', 1);" href="/publications/tvblog/">TVBlog</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_tv', 1);" href="/publications/tv-watch/">TV Watch</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_media', 1);" href="/publications/advanced-tv-insider/">Advanced TV Insider</a></dd></dl></div><!--/end section--><div class="section"><dl><dt>Publishing &amp; Publishers</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_publishing', 1);" href="/publications/publishers-daily/"><b>Publishers Daily</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_publishing', 1);" href="/publications/publishing-insider/">Publishing Insider</a></dd></dl></div><!--/end section--></div><!--/end column--><div class="column"><div class="section"><dl><dt>Brand and Product Marketing</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-daily/"><b>MarketingDaily</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-daily-top-of-the-news/">Marketing: Top of the News</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-insider/">Marketing Insider</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/brand-insider/">Brand Insider</a></dd><dt>Marketing Sectors</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-politics-weekly/">Marketing Politics Weekly</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-automotive-weekly/">Marketing Automotive Weekly</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-cpg-weekly/">Marketing: CPG Weekly</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-d2c-weekly/">Marketing: D2C Weekly</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'news_brand', 1);" href="/publications/marketing-qsr-weekly/">Marketing: QSR Weekly</a></dd></dl></div></div><!--/end column--></div><!--/end menu--></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a><ul class="dropdown-menu" id="nav_events"><li><div class="menu"><div class="column"><dl><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_home', 1);" href="/events/" class="home_icon"><b>Events Home</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_calendar', 1);" href="/events/2021/" id="calendar_link"><b>2021 Events Calendar</b></a></dd><dt>Upcoming Events</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/emailinsidersummit/">Email Insider Summit<br /><em>April 20 - 21, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/outfrontforum/">Outfront Forum<br /><em>April 28, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/brandinsidersummitd2c/">Brand Insider Summit D2C<br /><em>May 11 - 12, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/brandinsidersummitqsr/">Brand Insider Summit QSR<br /><em>May 26 - 27, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/publishinginsidersummit/">Publishing Insider Summit<br /><em>June 10 - 11, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/searchinsidersummit/">Search and Performance Insider Summit<br /><em>June 14 - 15, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_upcoming', 1);" href="/programmaticinsidersummit/">Data & Programmatic Insider Summit<br /><em>July 19 - 21, 2021, Virtual Event</em></a></dd></dl></div><!--/end column--><div class="column"><dl><dt>Recently Concluded</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/marketing-automotive/">Marketing: Automotive<br /><em>April 6 - 7, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/brandinsidersummitcpg/">Brand Insider Summit CPG<br /><em>March 16 - 17, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/tvvideoinsidersummit/">TV + Video Insider Summit<br /><em>March 2 - 3, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/brandinsidersummitretail/">Brand Insider Summit Retail<br /><em>February 16 - 17, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/marketing-politics/">Marketing: Politics<br /><em>February 10, 2021, Virtual</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/creativemediaawards/">Creative Media Awards<br /><em>February 5, 2021, NYC</em></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'events_concluded', 1);" href="/forecast/">Forecast<br /><em>February 2 - 3, 2021, Virtual</em></a></dd></dl></div><!--/end column--><div class="column"><dl><dt>More Events</dt></dl></div><!--/end column--></div><!--/end menu--></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Awards<span class="caret"></span></a><ul class="dropdown-menu" id="nav_awards"><li><div class="menu"><div class="column"><dl><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/awards/" class="home_icon"><b>Awards Home</b></a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/creativemediaawards/">Creative Media Awards&nbsp;(February 5, 2021, NYC)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/agencyoftheyear/">Agency of the Year&nbsp;(January 1, 2021, Online Announcement)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/mediapostallstars/">MediaPost All Stars&nbsp;(January 1, 2021, Online Announcement)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/eisawards/">EIS Awards&nbsp;(October 6, 2020, NYC)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/ommaawards/">OMMA Awards&nbsp;(October 5, 2020, NYC)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/marketingautomotiveawards/">Marketing Automotive Awards&nbsp;(August 11, 2020, Online)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'awards', 1);" href="/digitaloohawards/">Digital Out of Home Awards&nbsp;(October 15, 2019, NYC)</a></dd></dl></div><!--/end column--></div><!--/end menu--></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Members<span class="caret"></span></a><ul class="dropdown-menu" id="nav_members"><li><div class="menu"><div class="column"><dl><dt>Become A MediaPost Member</dt><div style="font-style:italic;color:#ffffff;padding-left:12px;">Subscribe to your choice of industry specific newsletters, save $100 on conferences, search member directories, comment on stories and more. Free to qualified media, marketing and advertising professionals.</div><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'members_join', 1);" href="/register/">Join Now</a></dd><dt>Member Resources</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'members_directory', 1);" href="/people/">All Member Directory</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'members_manage', 1);" href="/account/">Manage My Account</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'members_manage', 1);" href="/account/subscriptions/">Manage My Subscriptions</a></dd></dl></div><!--/end column--></div><!--/end menu--></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More<span class="caret"></span></a><ul class="dropdown-menu" id="nav_more"><li><div class="menu"><div class="column"><dl><dt>Additional Resources</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_feedbackloop', 1);" href="/publications/feedback-loop/">Feedback Loop (Comments)</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_jobs', 1);" href="/jobs/">Job Postings</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_research', 1);" href="/research/cmmr/">Premium Research</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_academy', 1);" href="/academy/">MediaPost Academy</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_whitepapers', 1);" href="/whitepapers/">Whitepapers</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_webinars', 1);" href="/webinars/">Webinars</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_industryevents', 1);" href="/directories/">Industry Events</a></dd><dt>About and Contacts</dt><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_about', 1);" href="/about/">About MediaPost</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_masthead', 1);" href="/publications/masthead/">Contact Editorial</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_privacy', 1);" href="/privacy/">Privacy/Terms</a></dd><dd><a onclick="ga('send', 'event', 'topmenu', 'click', 'more_mediakit', 1);" href="/mediakit/">Media Kit</a></dd></dl></div><!--/end column--></div><!--/end menu--></li></ul></li><li class="dropdown"><a class="dropdown-toggle" id="search" data-toggle="dropdown" href="#">Search<span class="caret"></span></a><ul class="dropdown-menu" id="nav_search"><li><div class="menu"><div id="search-box"><form id="pubshomekeywordsearch" name="pubshomekeywordsearch" action="/publications/search/" method="get" onsubmit="ga('send', 'event', 'topmenu', 'click', 'search', 1);"><input id="id_q" class="manageMenu" type="text" name="q" style="width:200px;"><input id="search-submit" type="submit" style="background: url('https://s3.amazonaws.com/static.mediapost.com/images/mp_sprites.png') 0 -32px transparent; border:0; width:20px; height:20px; cursor:pointer;" alt="" value=""></form><a onclick="ga('send', 'event', 'topmenu', 'click', 'searchadvanced', 1);" href="/publications/advanced-search/">Advanced Search</a></div></div><!--/end menu--></li></ul></li></ul><ul class="nav navbar-nav navbar-right"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Sign in</span><span class="caret"></span></a><ul class="dropdown-menu"><li><div class="menu"><div id="signin_menu" class="common-form standard-form"><form onsubmit="ga('send', 'event', 'topmenu', 'submit', 'signin', 1);" method="post" name='popSigninForm' id="popSigninForm" action="/login/?next=/publications/article/339667/what-we-can-learn-from-chinas-use-of-facial-recog.html"><input type="hidden" name="csrfmiddlewaretoken" value="4nESulwrlNInGhlhZxwoBGMTNHg2UyGkiO6LQ8UNSSnxZQUZKZXeAGXGTt6HqW1K"><p><strong>Username</strong><input id="username" name="username" title="username" tabindex="4" type="text"></p><p><strong>Password</strong><input id="password" name="password" value="" title="password" tabindex="5" type="password"></p><p class="remember"><input value="Sign in" tabindex="7" type="submit"><input id="remember" name="remember_me" value="1" tabindex="6" type="checkbox" checked="checked"><label for="remember">Remember me</label></p><p class="forgot"><a onclick="ga('send', 'event', 'topmenu', 'click', 'password_reset', 1);" class="modal_45_45 cboxElement" href="/password-reset/?modal=1" id="resend_password_link">Forgot your password?</a></p></form></div></div></li></ul></li><li><a onclick="ga('send', 'event', 'topmenu', 'click', 'register', 1);" href="/register/" id="register">Register</a></li><li><a onclick="ga('send', 'event', 'topmenu', 'click', 'advertise', 1);" href="/mediakit/">Advertise</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow<span class="caret"></span></a><ul class="dropdown-menu social"><li id="twitter_nav_icon"><a onclick="ga('send', 'event', 'topmenu', 'click', 'twitter', 1);" href="https://twitter.com/mediapost"></a></li><li id="facebook_nav_icon"><a onclick="ga('send', 'event', 'topmenu', 'click', 'facebook', 1);" href="https://www.facebook.com/MediaPost"></a></li><li id="linkedin_nav_icon"><a onclick="ga('send', 'event', 'topmenu', 'click', 'linkedin', 1);" href="https://www.linkedin.com/company/mediapost"></a></li></ul></li></ul></div></div></nav><div class="container-fluid" id="wrapper-fluid"><div id="ads_leaderboard" class="container-fluid img-responsive"><div id="row"><div class="ads_leaderboard"><div id="dynamicad_339667_1" ><script>
+        var targets = document.querySelectorAll('#dynamicad_339667_1');
+
+        var lazyLoad = target => {
+            const io = new IntersectionObserver((entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        dynamicAd('leaderboard');
+
+                        function dynamicAd(position) {
+                            /* this rndId has to be used just like this in the Smart+ call or that ad call blows up :shrug: */
+                            var rndId = parseInt(Math.random() * 1000000).toString();
+                            var smartDiv = document.createElement("div");
+                            smartDiv.id = rndId;
+                             smartDiv.className = 'ads_leaderboard';
+                            var smartTag = document.createElement("script");
+                            $(smartTag).text("sas.call('std', {siteId:100806,pageId:810997,formatId:41713,tagId:" + rndId + "});");
+
+                            smartDiv.appendChild(smartTag);
+
+                            $('#dynamicad_339667_1').append(smartDiv);
+                        }
+
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            io.observe(target)
+        };
+
+        targets.forEach(lazyLoad);
+    </script></div></div></div></div><div class="container" id="article-container"><div class="modal fade" id="paywall-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div style="float:right;position:relative;top:-15px;right:-15px;"><a href="/"><img src="https://s3.amazonaws.com/static.mediapost.com/images/cross-circle.png"></a></div><div><div style="padding-bottom: 20px;"><h4>While other MediaPost newsletters and articles remain free to all ... our new Research Intelligencer service is reserved for paid subscribers ...</h4><p>
+                                Subscribe today to gain access to every <em>Research Intelligencer</em> article we publish as well as the exclusive daily newsletter, full access to <em>The MediaPost Cases</em>, first-look research and daily insights from Joe Mandese, Editor in Chief.
+                            </p><a href="/subscribe/None/" class="btn btn-default" style="color: #ffffff; background-color: #000; border-color: #000; margin-top:10px;">Become a subscriber today!</a></div><span><form action="/login/?next=/publications/article/339667/what-we-can-learn-from-chinas-use-of-facial-recog.html" method="POST"><div style='display:none'><input type="hidden" name="csrfmiddlewaretoken" value="4nESulwrlNInGhlhZxwoBGMTNHg2UyGkiO6LQ8UNSSnxZQUZKZXeAGXGTt6HqW1K"></div><p>If you're already a paid subscriber, please sign-in.</p><p><label for="id-username">Username</label>&nbsp;&nbsp;
+                                    <input id="id-username" tabindex="1" name="username" title="username" type="text" /></p><p><label for="id-password">Password</label>&nbsp;&nbsp;
+                                    <input id="id-password" tabindex="2" name="password" title="password" type="password" /><span style="padding:8px 0;">&nbsp;&nbsp;<a href="/password-reset/" style="text-decoration:underline;">Forgot?</a></span></p><span class=""><input value="Sign in" tabindex="3" type="submit"></span></form></span></div></div></div></div></div><div class="modal fade" id="accesswall-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div style="float:right;position:relative;top:-15px;right:-15px;"><a href="/"><img src="https://s3.amazonaws.com/static.mediapost.com/images/cross-circle.png"></a></div><div><div style="padding-bottom: 14px;border-bottom-width: 1px; border-bottom-color: grey; border-bottom-style: solid;"><h1 style="font-family: 'Open Sans Condensed', Arial Narrow, sans-serif;font-weight:700;font-size:2.4em;text-align:center;line-height:.9em; padding-bottom:6px;">Become a free MediaPost member now to read this article</h1><ul><li>Unlimited articles every day</li><li>Keep up-to-date with media, marketing and advertising news</li><li>Invitations to exclusive industry events and research</li></ul><p style="text-align:center;" id="aw-url"></p></div><span><form action="/login/?next=/publications/article/339667/what-we-can-learn-from-chinas-use-of-facial-recog.html" method="POST"><div style='display:none'><input type="hidden" name="csrfmiddlewaretoken" value="4nESulwrlNInGhlhZxwoBGMTNHg2UyGkiO6LQ8UNSSnxZQUZKZXeAGXGTt6HqW1K"></div><p style="font-size:12px;">Log in if you are already a member</p><p style="font-size:12px;"><label for="id-username">Username</label>&nbsp;&nbsp;
+                                    <input id="id-username" tabindex="1" name="username" title="username" type="text" /></p><p style="font-size:12px;"><label for="id-password">Password</label>&nbsp;&nbsp;
+                                    <input id="id-password" tabindex="2" name="password" title="password" type="password" /><span style="padding:8px 0;">&nbsp;&nbsp;<a href="/password-reset/" style="text-decoration:underline;">Forgot?</a></span></p><span class="" style="font-size:12px;"><input value="Sign in" tabindex="3" type="submit"></span></form></span></span></div></div></div></div></div><div class="row"><div id="article_news" class="col-md-8"><div class="header"><a href="/publications/marketing-insider/" id="header_article_marketing-insider?v=3"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/headers2/article-marketing-insider.png" alt=""></a></div></div><script src='https://www.google.com/recaptcha/api.js'></script><script>
+                    function onSubmit(token) {
+                        document.getElementById("subform").submit();
+                    }
+                </script><div id="sidebar_subscribe" class="col-md-4"><div id="subscribe_form"><div class="sidebar_title hidden-sm hidden-xs">Subscribe to <em>Marketing Insider</em></div><form name='subform' id='subform' method="post" action="" onsubmit="ga('send', 'event', 'article', 'submit', 'subscribeform', 1);" novalidate><div style='display:none'><input type="hidden" name="csrfmiddlewaretoken" value="4nESulwrlNInGhlhZxwoBGMTNHg2UyGkiO6LQ8UNSSnxZQUZKZXeAGXGTt6HqW1K"></div><div class="subscribe_email"><label name='inField' for="id_subform-email"></label><input type="text" name="subform-email" placeholder="enter your email address" required id="id_subform-email"></div><input type="hidden" name="subform-newsletter" value="9045" id="id_subform-newsletter"><input type="submit" name="subform" value="Subscribe" id="subscribe"
+                                   class="g-recaptcha" data-sitekey="6LeoKwAVAAAAAIS1cO_B0MKCBi00R_XKh1m1uVl0" data-callback='onSubmit'
+                                   onclick="this.style.visibility='hidden';" ondblclick="this.style.visibility='hidden';" /></form></div></div></div><div class="row" ><div class="col-md-8"><div id="article_headline" class="col-md-11"><h3>Commentary</h3><h1 id="title">What We Can Learn from China&#39;s Use of Facial Recognition Tech</h1></div><div id="article_body"><div id="article_body_main" class="col-md-11 " ><ul id="mcs"><li id="meta-in">
+                            
+                                
+                                    
+                                        by <a onclick="ga('send', 'event', 'article', 'click', 'author', 1);" rel="author" href="/publications/author/7927/yuting-zhang/">Yuting Zhang</a>
+                                        , 
+                                    
+                                
+                                August 23, 2019
+                            
+                        </li></ul>
+
+                    
+                        
+                            
+
+The city of San Francisco made headlines when it banned the use of facial recognition technology by police and other government departments. Meanwhile, China has been pushing to leverage this
+technology to a more robust level.  <p></p><p>To explain how facial recognition technology works in a nutshell: Think of a topographic map being created for your face. The technology measures the
+distance between your eyes, the angle of your jawline, how high your cheekbones are, etc. All these landmarks, valleys, and peaks are being used to map your face.&nbsp;</p><p>In China, many major
+cities have extensive surveillance camera systems. Once these cameras are equipped with facial recognition technology, citizens&rsquo; faces, ages, genders, whom they friend, and where they shopped
+can all be mapped together. While the large population (over 1.3 billion) and centralized identity database might make adopting and applying facial recognition technology easier than in the U.S. or
+Europe, China is still at an early stage of testing and is experimenting with different applications of the technology, while striving to be a global leader in the field.&nbsp;</p><div class="ads_inline_640"><!-- ~advertisement~ big_unit --><p>advertisement</p><div id="dynamicad_339667_15" ><script>
+        var targets = document.querySelectorAll('#dynamicad_339667_15');
+
+        var lazyLoad = target => {
+            const io = new IntersectionObserver((entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        dynamicAd('big_unit');
+
+                        function dynamicAd(position) {
+                            /* this rndId has to be used just like this in the Smart+ call or that ad call blows up :shrug: */
+                            var rndId = parseInt(Math.random() * 1000000).toString();
+                            var smartDiv = document.createElement("div");
+                            smartDiv.id = rndId;
+                            
+                            var smartTag = document.createElement("script");
+                            $(smartTag).text("sas.call('std', {siteId:100806,pageId:810997,formatId:47606,tagId:" + rndId + "});");
+
+                            smartDiv.appendChild(smartTag);
+
+                            $('#dynamicad_339667_15').append(smartDiv);
+                        }
+
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            io.observe(target)
+        };
+
+        targets.forEach(lazyLoad);
+    </script></div><p>advertisement</p></div><p><strong>Marketers Take Note</strong></p><p>In addition to the application on the state level, some companies have already taken this to the next step.</p><p>For example, In 2018, Alipay started
+testing a system called &ldquo;Smile To Pay&rdquo; at KFCs in the company&rsquo;s hometown, Hangzhou. This product allows customers to complete their payments by smiling in front of the
+restaurant&rsquo;s self-service kiosks. JD.com, another leader in the e-commerce space, has been embracing facial recognition and voice scan technologies to monitor swine wellbeing and track
+individual pigs to manage the swine shortage in China.</p><p><strong>The Big Debate</strong></p><p>Facial recognition is an AI technology. A massive amount of faces are required to train the
+algorithm. The lack of data, which can lead to inaccuracy, is one of the main concerns people have with the technology.&nbsp;</p><p>In addition, facial recognition technology isn&rsquo;t just about
+verifying one&rsquo;s biometric identification, but also can be used to create someone&rsquo;s psychometric profile. Imagine your subtle facial expressions are being recorded and logged to match with
+what you are seeing, hearing, smelling, and doing -- more than Cambridge Analytica could have ever dreamed of.</p><p>Deploying facial recognition technology is undoubtedly another double-edged
+sword. Using it in payment or authorization effectively frees people from their smart phone dependence. Using it in advertising, people can be served with super-relevant ads; but who wants to admit
+that someone else might know us better than ourselves? Use by law enforcement can help people find missing children and identify criminals, but no one wants to live in a police state.</p></div><div id="widget_main" class="col-md-12 widget-waypoint" style="min-height:42px;" data-id="339667"><div class="widget affix" id="widget-339667"><nav class="widget_group"><ul class="widget_tools"><li id="twitter"><a href="#" title="Share on Twitter" onClick="return tw_click(' ', 'What We Can Learn from China\u0027s Use of Facial Recognition Tech http://bit.ly/2TZpgbu', '339667', '7')"><span class="icon"></span></a></li><li class="facebook"><a href="#" title="Share on Facebook" onClick="return fbs_click('http://bit.ly/2TZpgbu', 'What We Can Learn from China\u0027s Use of Facial Recognition Tech', '339667', '7')"><span class="icon"></span></a></li><li class="linkedin"><a href="#" title="Share on LinkedIn" onClick="return lis_click('http://bit.ly/2TZpgbu', 'What We Can Learn from China\u0027s Use of Facial Recognition Tech', '339667', '7')"><span class="icon"></span></a></li></ul></nav></div></div></div><!-- email to a friend modal - should be used for anything we want to modal on this page --><div class="modal fade" id="article_util_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false"><div class="modal-dialog"><div class="modal-content"></div></div></div><div id="comments-container-339667" class="col-md-11"><div id="comment_header"><span class="comment_count">1 comment</span> about "What We Can Learn from China&#39;s Use of Facial Recognition Tech".
+                        <div id="email_notification"><input id="id_commentsubscription_status_339667"  name="status" type="checkbox" style="margin:0; padding: 0;"><span class="commentsubscription_message_339667">
+                                Check to receive email when comments are posted.
+                            </span></div></div><a name="comments"></a><ol class="commentlist"><li class="browncomment" id="comment-163683" ><div style="margin-top:5px;"><a href="/people/paulalynn/" rel="nofollow"><strong>Paula Lynn</strong></a> from <strong>Who Else Unlimited</strong>,
+                                    August 26, 2019 at 1:50 p.m.
+                                </div><div class="commentcontent"><p>You can learn how fascism works to worst and lose all your rights as a living being. 1984. </p><div style="margin-top:5px;"><a class="reply" href="" id="reply-339667-163683" style="color:font-weight:bold;">Reply</a></div></div></li><div class="collapse" id="comments-expanded-339667"></div></ol><div style="col-md-11"><button class="leave-comment" id="leave-comment-339667">Comment</button><div class="loader"><center>
+                            Next story loading <img class="loading-image" src="https://s3.amazonaws.com/static.mediapost.com/publications/images/ajax-loader.gif" alt="loading.."></center></div></div><div id="comments-main-339667"><div id="comment-form-339667" style="margin-top:5px;"></div></div></div></div><!--/end article news--><div class="col-md-4 sidebar"><div class="rule"></div><div class="sidebar_group" style="text-align:center;"><div class="author_box"><div class="sidebar_title">About the Author</div><p id="author_d"><a rel="author" onclick="ga('send', 'event', 'article', 'click', 'author', 1);" href="/publications/author/7927/yuting-zhang/">YUTING ZHANG</a>, senior biddable strategist,&nbsp;The Media Kitchen</p></div></div><div class="sidebar_group hidden-sm hidden-xs"><style type="text/css">
+    .outer_box {
+        border: 1px solid #DFE0E0;
+    }
+
+    .story {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight:700;
+        background: #efefef none repeat scroll 0 0;
+        line-height: 1.3em;
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+    .events_box {
+        font-family: 'Open Sans ', sans-serif;
+        font-weight:300;
+        background: #036CA5 none repeat scroll 0 0;
+        color: #ffffff;
+        line-height: 1.3em;
+        padding: 5px;
+    }
+
+    .events_text {
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: black;
+        line-height: 1.3em;
+        padding: 5px;
+    }
+
+    .big_box {
+        color: black;
+        line-height: 1.3em;
+    }
+
+    .active_event_furniture {
+        background-color: #036CA5;
+        color: #fff;
+        line-height: 1.3em;
+        margin-top: 5px;
+        padding: 5px;
+        display: inline-block;
+    }
+
+    .active_event_furniture_text {
+        font-family: 'Open Sans Condensed', sans-serif;
+        color: #036CA5;
+        line-height: 1.3em;
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+</style><div class="outer_box"><div class="events_box">UPCOMING EVENTS</div><a onclick="ga('send', 'event', 'furniture', 'click', 'events', 1);" href="/emailinsidersummit/" class="headline"><div class="active_event_furniture_text"><strong>Email Insider Summit</strong>&nbsp;&nbsp;April 20 - 21, 2021
+                    <div class="events_text"><strong></strong></div><div class="events_text"></div></div></a><a onclick="ga('send', 'event', 'furniture', 'click', 'events', 1);" href="/emailinsidersummit/#speakers"><div class="events_text">Featuring top industry speakers including:</div><div class="events_text" style="margin-bottom: 15px;"><p><img style="float: left; border-radius: 50%; max-width:25%;  border: 1px solid #036CA5;" src="https://s3.amazonaws.com/media.mediapost.com/images/events/contributor/online/hamish_stacy_14855.PNG"><div style="margin-top: 15px; padding-left: 80px;">Hamish Stacy - Mondelez, Data and CRM Manager - Europe</div></div><div class="events_text" style="margin-bottom: 15px;"><p><img style="float: left; border-radius: 50%; max-width:25%;  border: 1px solid #036CA5;" src="https://s3.amazonaws.com/media.mediapost.com/images/events/contributor/online/jason_scoggins_14843.jpg"><div style="margin-top: 15px; padding-left: 80px;">Jason Scoggins - Chipotle Mexican Grill, Director, Loyalty &amp; CRM</div></div></a><div>&nbsp;</div><div class="events_box">YOU MAY ALSO LIKE...</div><a onclick="ga('send', 'event', 'furniture', 'click', 'events', 1);" href="/brandinsidersummitd2c/" class="headline"><div class="story"> Brand Insider Summit D2C
+                        <div> May 11 - 12, 2021</div></div></a><a onclick="ga('send', 'event', 'furniture', 'click', 'events', 1);" href="/brandinsidersummitqsr/" class="headline"><div class="story"> Brand Insider Summit QSR
+                        <div> May 26 - 27, 2021</div></div></a></div></div><div class="sidebar_group hidden-sm hidden-xs" style="text-align:center;"><!-- position: tower_top --><div id="ads_tower_top" class="advert"><p>advertisement</p><div id="dynamicad_339667_2" ><script>
+        var targets = document.querySelectorAll('#dynamicad_339667_2');
+
+        var lazyLoad = target => {
+            const io = new IntersectionObserver((entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        dynamicAd('tower_top');
+
+                        function dynamicAd(position) {
+                            /* this rndId has to be used just like this in the Smart+ call or that ad call blows up :shrug: */
+                            var rndId = parseInt(Math.random() * 1000000).toString();
+                            var smartDiv = document.createElement("div");
+                            smartDiv.id = rndId;
+                            
+                            var smartTag = document.createElement("script");
+                            $(smartTag).text("sas.call('std', {siteId:100806,pageId:810997,formatId:41714,tagId:" + rndId + "});");
+
+                            smartDiv.appendChild(smartTag);
+
+                            $('#dynamicad_339667_2').append(smartDiv);
+                        }
+
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            io.observe(target)
+        };
+
+        targets.forEach(lazyLoad);
+    </script></div></div></div><div class="sidebar_group "><div class="sidebar_title">SPONSORED CONTENT</div><ul><li><!-- ~advertisement~ native_a --><a href="https://info.innovid.com/2021-global-omni-channel-benchmarks?utm_campaign=2021Q2_Benchmarks&utm_source=mediapost&utm_medium=sponsored-content_marketing-insider">Download Now: The Year Streaming Went Supernova | Global Omni-Channel Benchmarks Report</a><br><img src="https://www5.smartadserver.com/imp?imgid=26623093&tmstp={{misc}}&tgt=" height="1" width="1"></li></ul></div></div><!--/end sidebar--></div><!--/end row--></div><!-- ONLY DISPLAY DISCOVER AND FOOTER WHEN ES HAS CEASED --><div class="container" id="ads_speedbump" style="text-align: center;width:100%;"><div id="dynamicad_3" ><script>
+        var targets = document.querySelectorAll('#dynamicad_3');
+
+        var lazyLoad = target => {
+            const io = new IntersectionObserver((entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        dynamicAd('speedbump');
+
+                        function dynamicAd(position) {
+                            /* this rndId has to be used just like this in the Smart+ call or that ad call blows up :shrug: */
+                            var rndId = parseInt(Math.random() * 1000000).toString();
+                            var smartDiv = document.createElement("div");
+                            smartDiv.id = rndId;
+                            
+                            var smartTag = document.createElement("script");
+                            $(smartTag).text("sas.call('std', {siteId:100806,pageId:810997,formatId:41715,tagId:" + rndId + "});");
+
+                            smartDiv.appendChild(smartTag);
+
+                            $('#dynamicad_3').append(smartDiv);
+                        }
+
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            io.observe(target)
+        };
+
+        targets.forEach(lazyLoad);
+    </script></div></div><div class="container wide" id="publications" style="padding-left: 40px; padding-right: 15px;"><div id="title"><h3>Discover Our Publications</h3></div><div id="myCarousel" class="carousel slide" data-interval="false"><div class="carousel-inner"><div class="active item"><ul><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/digital-news-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/digital-news-daily.png" alt="Digital News Daily"></div><div class="publication_description">The art, craft and science of digital media, advertising and marketing</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/mediadailynews/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/mediadailynews.png" alt="Media Daily News"></div><div class="publication_description">Must-read daily news for media planning and sales professionals.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/marketing-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/marketing-daily.png" alt="Marketing Daily"></div><div class="publication_description">Must-read daily news for brand, product, service marketing execs.</div></div></a></li></ul></div><div class="item"><ul><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/mediaposts-agency-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/mediaposts-agency-daily.png" alt="MAD MediaAgencyDaily"></div><div class="publication_description">Advertising and agency news, campaigns, accounts and more.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/television-news-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/television-news-daily.png" alt="Television News Daily"></div><div class="publication_description">Must-read daily news for the television industry.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/publishers-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/publishers-daily.png" alt="Publishers Daily"></div><div class="publication_description">Must-read daily news for the publishing industry.</div></div></a></li></ul></div><div class="item"><ul><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/email-marketing-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/email-marketing-daily.png" alt="Email Marketing Daily"></div><div class="publication_description">Must-read daily news for email marketers.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/search-marketing-daily/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/search-marketing-daily.png" alt="Search Marketing Daily"></div><div class="publication_description">Must-read daily news for the search & performance marketers.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/research-intelligencer/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/research-intelligencer.png" alt="Research Intelligencer"></div><div class="publication_description">Premium insights on research daily.</div></div></a></li></ul></div><div class="item"><ul><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/brand-insider/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/brand-insider.png" alt="Brand Insider"></div><div class="publication_description">In-depth interviews with brand marketers.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/media-insider/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/media-insider.png" alt="Media Insider"></div><div class="publication_description">Inside media planning.</div></div></a></li><li><a onclick="ga('send', 'event', 'homepage', 'click', 'carousel', 1);" href="/publications/marketing-insider/"><div class="our_publications"><div class="publication_title"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/homepage_principals/marketing-insider.png" alt="Marketing Insider"></div><div class="publication_description">Inside brand marketing.</div></div></a></li></ul></div></div><a class="carousel-btn left" href="#myCarousel" data-slide="prev">‹</a><a class="carousel-btn right" href="#myCarousel" data-slide="next">›</a></div></div><div id="footer"><div class="container"><div class="row"><div class="col-md-12"><div id="footer-logo"><img src="https://s3.amazonaws.com/static.mediapost.com/publications/images/mp-footer-logo.jpg" alt="MediaPost"></div><div id="footer-r"><ul><li><a href="/about/">About MediaPost</a></li><li><a href="/mediakit/">MediaKit</a></li><li><a href="/publications/masthead/">Contact Editorial</a></li><li><a href="/publications/feeds/">RSS Feeds</a></li><li><a href="/sitemap/">Sitemap</a></li><li><a href="/privacy/">Privacy/Terms &amp; Conditions</a></li></ul><div id="copy">
+                        &copy;2021 MediaPost Communications. All rights reserved.<br>
+                        PO Box 351, Wilton, CT 06897<br>
+                        tel. 212-204-2000, fax 917-591-3261, <a href="mailto:feedback@mediapost.com">feedback@mediapost.com</a>&nbsp;&nbsp;&nbsp;<a href="https://plus.google.com/110488724564818521433">Google+</a><br><br><em>All content published by MediaPost is determined by our editors 100% in the interest of our readers ... independent of advertising, sponsorships or other considerations. </em></div></div></div></div></div></div></div><!--/end container--><!-- Facebook Pixel Code --><script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1353226008029768');
+        fbq('track', 'PageView');
+    </script><noscript><img height="1" width="1"
+             src="https://www.facebook.com/tr?id=1353226008029768&ev=PageView&noscript=1"/></noscript><!-- End Facebook Pixel Code --><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-332663-5', 'mediapost.com');
+    
+        var dimensionValue = 'driveby';
+    
+    ga('set', 'dimension1', dimensionValue);
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+    setTimeout("ga('send','event','read','15 seconds')",15000);
+</script></body></html>
